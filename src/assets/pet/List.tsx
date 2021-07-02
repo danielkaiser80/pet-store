@@ -26,8 +26,9 @@ const List = () => {
 
     useEffect(() => {
         Promise.all(
-            pets
-                .filter((pet: PetType) => !query || pet.name.match(new RegExp(query, 'i')))
+            pets.filter((pet: PetType) => {
+                return !(query && (!(pet && pet.name && pet.name.match(new RegExp(query, 'i')))));
+            })
                 .slice(0, limit)
                 .map(async (pet: PetType) => {
                     const {data} = await RandomDog.get(`random?petId=${pet.id}`);
@@ -35,11 +36,7 @@ const List = () => {
                     pet.photoUrl = data.message;
                     return pet;
                 })
-        ).then((result: Array<PetType>) => {
-            console.log(result.length);
-
-            setFilteredPets(result);
-        });
+        ).then((result: Array<PetType>) => setFilteredPets(result));
     }, [pets, limit, query]);
 
     return (

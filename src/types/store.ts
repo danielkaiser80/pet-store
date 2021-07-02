@@ -1,23 +1,18 @@
 export interface Inventory {
-	sold: number;
-	string: number;
-	pending: number;
-	available: number;
-}
-export interface NewOrder {
-	petId: number;
-	quantity: number;
-	shipDate: number;
-	status: string;
-	complete: boolean;
+    sold: number;
+    string: number;
+    pending: number;
+    available: number;
 }
 
-export interface Order extends NewOrder {
-	id: number;
+export interface NewOrder {
+    petId: number;
+    quantity: number;
+    shipDate: number;
+    status: string;
+    complete: boolean;
 }
 
 export enum Status {
-	PLACED = 'placed',
-	APPROVED = 'approved',
-	DELIVERED = 'delivered',
+    PLACED = 'placed',
 }
