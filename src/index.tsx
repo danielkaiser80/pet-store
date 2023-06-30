@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import App from "./App";
+import MainApp from "./App";
+import {createRoot} from "react-dom/client";
+import {StrictMode} from "react";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const root = createRoot(document.getElementById("root")!);
+root.render(
+    <StrictMode>
+        <MainApp/>
+    </StrictMode>
 );

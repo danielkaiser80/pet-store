@@ -1,42 +1,45 @@
-import React, { Dispatch, SetStateAction } from 'react';
-import { useState, createContext } from 'react';
-import { Container } from 'react-bootstrap';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, {useState, createContext} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {Container} from 'react-bootstrap';
 import Header from './layouts/Header';
 import Content from './layouts/Content';
 import List from './assets/pet/List';
 import Dashboard from './assets/store/Dashboard';
 
-export const SearchContext = createContext<{ query: string; setQuery: Dispatch<SetStateAction<string>> }>({
-	query: '',
-	setQuery: () => {},
+export const SearchContext = createContext<{ query: string; setQuery: React.Dispatch<React.SetStateAction<string>> }>({
+    query: '',
+    setQuery: () => {
+    },
 });
 
-function App() {
-	const [query, setQuery] = useState<string>('');
+function App({children}) {
+    const [query, setQuery] = useState<string>('');
 
-	return (
-		<Router>
-			<SearchContext.Provider value={{ query, setQuery }}>
-				<Container>
-					<Header />
-					<Content>
-						<Switch>
-							<Route path="/pets">
-								<List />
-							</Route>
-							{/* <Route path="/users">
-						<Users />
-					</Route> */}
-							<Route path="/">
-								<Dashboard />
-							</Route>
-						</Switch>
-					</Content>
-				</Container>
-			</SearchContext.Provider>
-		</Router>
-	);
+    return (
+        <SearchContext.Provider value={{query, setQuery}}>
+            <Router>
+                <Container>
+                    <Header/>
+                    <Content>
+                        {children}
+                    </Content>
+                </Container>
+            </Router>
+        </SearchContext.Provider>
+    );
 }
 
-export default App;
+function MainRoutes() {
+    return (
+        <Routes>
+            <Route path="/" element={<Dashboard/>}/>
+            <Route path="/pets" element={<List/>}/>
+        </Routes>
+    );
+}
+
+export default () => (
+    <App>
+        <MainRoutes/>
+    </App>
+)

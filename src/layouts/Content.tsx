@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
-import { Container } from "react-bootstrap";
+import {ReactNode} from "react";
+import {Container} from "react-bootstrap";
 
 interface Props {
-  children?: ReactNode;
+    children?: ReactNode;
 }
 
-const Content = ({ children }: Props) => <Container>{children}</Container>;
+const Content = ({children}: Props) => <Container>{children}</Container>;
 export default Content;

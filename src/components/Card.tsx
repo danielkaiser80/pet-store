@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card as BCard } from 'react-bootstrap';
 
 import { Pet } from '../types/pet';

@@ -1,7 +1,7 @@
-import React, {useContext, useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import useInfiniteScroll from 'use-infinite-scroll';
 
-import {CardColumns} from 'react-bootstrap';
+import {CardGroup} from 'react-bootstrap';
 import {Card} from '../../components/Card';
 import {Pet as PetType, Status} from '../../types/pet';
 import {findByStatus} from '../../resources/Pet';
@@ -41,11 +41,11 @@ const List = () => {
 
     return (
         <>
-            <CardColumns>
+            <CardGroup>
                 {filteredPets.map((pet: PetType, idx: number) => (
                     <Card key={idx} pet={pet}/>
                 ))}
-            </CardColumns>
+            </CardGroup>
             {isFetching ? 'Fetching...' : ''}
         </>
     );
