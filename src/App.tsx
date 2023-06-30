@@ -8,7 +8,6 @@ import {
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Header from "./layouts/Header";
-import Content from "./layouts/Content";
 import List from "./assets/pet/List";
 import Dashboard from "./assets/store/Dashboard";
 
@@ -28,7 +27,7 @@ const App = ({ children }: PropsWithChildren) => {
       <Router>
         <Container>
           <Header />
-          <Content>{children}</Content>
+          <Container>{children}</Container>
         </Container>
       </Router>
     </SearchContext.Provider>

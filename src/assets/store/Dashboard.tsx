@@ -1,25 +1,22 @@
 import { useState } from "react";
 import Chart from "react-apexcharts";
-
-import { inventory } from "../../resources/Store";
+import axios from "../../axios";
 import { Inventory } from "../../types/store";
+import { Card } from "react-bootstrap";
 
 const Dashboard = () => {
   const [sold, setSold] = useState<number>(0);
   const [pending, setPending] = useState<number>(0);
   const [available, setAvailable] = useState<number>(0);
 
-  inventory().then(
-    ({
-      sold: newSold,
-      pending: newPending,
-      available: newAvailable,
-    }: Inventory) => {
+  axios
+    .get<Inventory>(`store/inventory`)
+    .then(({ data }) => data)
+    .then(({ sold: newSold, pending: newPending, available: newAvailable }) => {
       setSold(newSold);
       setPending(newPending);
       setAvailable(newAvailable);
-    }
-  );
+    });
 
   const options = {
     labels: ["Sold", "Pending", "Available"],
@@ -29,12 +26,14 @@ const Dashboard = () => {
   return (
     <>
       <h1>Inventory</h1>
-      <Chart
-        series={[sold, pending, available]}
-        options={options}
-        type="pie"
-        width="580px"
-      />
+      <Card style={{ background: "white" }}>
+        <Chart
+          series={[sold, pending, available]}
+          options={options}
+          type="pie"
+          width="580px"
+        />
+      </Card>
     </>
   );
 };
