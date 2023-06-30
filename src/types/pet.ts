@@ -1,12 +1,9 @@
-export interface NewPet {
+export interface Pet {
   category: Category;
   name: string;
   photoUrls: Array<string>;
   tags: Array<Tag>;
   status: Status;
-}
-
-export interface Pet extends NewPet {
   id: number;
   photoUrl?: string;
 }
