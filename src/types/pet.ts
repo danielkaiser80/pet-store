@@ -1,27 +1,27 @@
 export interface NewPet {
-    category: Category;
-    name: string;
-    photoUrls: Array<string>;
-    tags: Array<Tag>;
-    status: Status;
+  category: Category;
+  name: string;
+  photoUrls: Array<string>;
+  tags: Array<Tag>;
+  status: Status;
 }
 
 export interface Pet extends NewPet {
-    id: number;
-    photoUrl?: string;
+  id: number;
+  photoUrl?: string;
 }
 
 export enum Status {
-    AVAILABLE = 'available',
-    PENDING = 'pending',
+  AVAILABLE = "available",
+  PENDING = "pending",
 }
 
 export interface Category {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
 }
 
 export interface Tag {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
 }

@@ -1,12 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const RandomDog = axios.create({
-	baseURL: 'https://dog.ceo/api/breeds/image',
+  baseURL: "https://dog.ceo/api/breeds/image",
 });
 
 export default axios.create({
-	baseURL: 'https://petstore.swagger.io/v2/',
-	headers: {
-		'Content-Type': 'application/json',
-	},
+  baseURL: "https://petstore.swagger.io/v2/",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });

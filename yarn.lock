@@ -2783,7 +2783,6 @@ __metadata:
     react-dom: ^18.2.0
     react-router-dom: ^6.14.1
     typescript: ~4.3.5
-    use-infinite-scroll: ^0.1.1
     vite: ^4.3.9
   languageName: unknown
   linkType: soft
@@ -3508,15 +3507,6 @@ __metadata:
   bin:
     update-browserslist-db: cli.js
   checksum: b98327518f9a345c7cad5437afae4d2ae7d865f9779554baf2a200fdf4bac4969076b679b1115434bd6557376bdd37ca7583d0f9b8f8e302d7d4cc1e91b5f231
-  languageName: node
-  linkType: hard
-
-"use-infinite-scroll@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "use-infinite-scroll@npm:0.1.1"
-  peerDependencies:
-    react: ^16.8.0
-  checksum: 792139a5392923fd424d3369364301ff874244e0553f2136d451a1fda27f6cdd3e73e511c473cb68db9e1907d08d7e5f9779ff21f92da08df7e53481f882873e
   languageName: node
   linkType: hard
 
