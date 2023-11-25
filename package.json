@@ -8,7 +8,7 @@
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.5.2",
+    "@types/jest": "^29.5.10",
     "@types/node": "^20.5.9",
     "apexcharts": "^3.41.0",
     "axios": "^1.6.2",
