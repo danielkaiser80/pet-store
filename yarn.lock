@@ -1236,12 +1236,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "bootstrap@npm:5.3.0"
+"bootstrap@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "bootstrap@npm:5.3.2"
   peerDependencies:
-    "@popperjs/core": ^2.11.7
-  checksum: 29a83cc8cac96d70051e265a5da342cc488df8fc76dff6746ef7d155698286cd5bdfa3e52c6ebf09f8e5a97f25929ee97aee36237117732e52b0d3276a72c45c
+    "@popperjs/core": ^2.11.8
+  checksum: d5580b253d121ffc137388d41da58dce8d15f1ccd574e12f28d4a08e7649ca15e95db645b2b677cb8025bccd446bff04138fc0fe64f8cba0ccc5dc004a8644cf
   languageName: node
   linkType: hard
 
@@ -2888,7 +2888,7 @@ __metadata:
     "@vitejs/plugin-react": ^4.2.0
     apexcharts: ^3.41.0
     axios: ^1.6.2
-    bootstrap: ^5.3.0
+    bootstrap: ^5.3.2
     camelcase: ^7.0.1
     react: ^18.2.0
     react-apexcharts: ^1.4.0
