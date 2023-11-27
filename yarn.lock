@@ -308,6 +308,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.22.5":
+  version: 7.23.4
+  resolution: "@babel/runtime@npm:7.23.4"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 8eb6a6b2367f7d60e7f7dd83f477cc2e2fdb169e5460694d7614ce5c730e83324bcf29251b70940068e757ad1ee56ff8073a372260d90cad55f18a825caf97cd
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.3":
   version: 7.9.2
   resolution: "@babel/runtime@npm:7.9.2"
@@ -691,7 +700,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.6.3":
+"@restart/ui@npm:^1.6.6":
   version: 1.6.6
   resolution: "@restart/ui@npm:1.6.6"
   dependencies:
@@ -925,12 +934,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-transition-group@npm:^4.4.5":
-  version: 4.4.6
-  resolution: "@types/react-transition-group@npm:4.4.6"
+"@types/react-transition-group@npm:^4.4.6":
+  version: 4.4.9
+  resolution: "@types/react-transition-group@npm:4.4.9"
   dependencies:
     "@types/react": "*"
-  checksum: 0872143821d7ee20a1d81e965f8b1e837837f11cd2206973f1f98655751992d9390304d58bac192c9cd923eca95bff107d8c9e3364a180240d5c2a6fd70fd7c3
+  checksum: be9e256e53919a7cf3b4a075f6d01c0a2dd3a67911dd28276aa6158be4beade4ca5327cbf1f096c28b413e04989f069122319b02e5a09c280d903a0accea9ead
   languageName: node
   linkType: hard
 
@@ -2867,7 +2876,7 @@ __metadata:
     camelcase: ^7.0.1
     react: ^18.2.0
     react-apexcharts: ^1.4.0
-    react-bootstrap: ^2.8.0
+    react-bootstrap: ^2.9.1
     react-dom: ^18.2.0
     react-router-dom: ^6.14.1
     typescript: ~5.1.6
@@ -2986,14 +2995,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "react-bootstrap@npm:2.8.0"
+"react-bootstrap@npm:^2.9.1":
+  version: 2.9.1
+  resolution: "react-bootstrap@npm:2.9.1"
   dependencies:
-    "@babel/runtime": ^7.21.0
+    "@babel/runtime": ^7.22.5
     "@restart/hooks": ^0.4.9
-    "@restart/ui": ^1.6.3
-    "@types/react-transition-group": ^4.4.5
+    "@restart/ui": ^1.6.6
+    "@types/react-transition-group": ^4.4.6
     classnames: ^2.3.2
     dom-helpers: ^5.2.1
     invariant: ^2.2.4
@@ -3009,7 +3018,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 589f64354ae03872a111fe3d37ad9b5dc2c69480edfd4b4f912a7d59cc15311df3f0374def08d5d6b63024b1674483daa862004e53bc5fac426d891993484ddc
+  checksum: 889de157ab782257a6496d37aebb578b13850caec41bdc068e68a2e1ff2af18740f0a388974850f59115a57fa34a2949a2803aaa79000498fef7d0b63b413706
   languageName: node
   linkType: hard
 
@@ -3140,6 +3149,13 @@ __metadata:
   version: 0.13.5
   resolution: "regenerator-runtime@npm:0.13.5"
   checksum: afc42d8b86f5ef2003821a2fc214c60640a07992563888529f45533071545c2631805d7214e32f55b517a665f1c59f2629a641a5cc1efbd56f48b6149dd319f2
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "regenerator-runtime@npm:0.14.0"
+  checksum: 1c977ad82a82a4412e4f639d65d22be376d3ebdd30da2c003eeafdaaacd03fc00c2320f18120007ee700900979284fc78a9f00da7fb593f6e6eeebc673fba9a3
   languageName: node
   linkType: hard
 
